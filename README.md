@@ -38,7 +38,7 @@ terraform plan
 terraform apply
 
 ```
-
+#### Highlight: This project can be extended as we can create our own VPC that why in module vpc directory is empty, as it required more effords as well.
 #### Note: This project require terraform version "<= 0.11.14"
 #### Note: When you upgrade to Terraform 0.12, your existing Terraform configurations might need syntax updates. You can make most of these updates automatically with the terraform 0.12upgrade command; for more information, see Upgrading to Terraform 0.12.
 
