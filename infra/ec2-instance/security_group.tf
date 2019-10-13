@@ -16,16 +16,6 @@ resource "aws_security_group" "allow_ssh" {
     # restrict your ingress to only necessary IPs and ports.
   }
 
-  ingress {
-    # SSH (change to whatever ports you need)
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["90.219.22.147/32"]
-    description = "allowing SSH accessible form The Dock IP of 90.219.22.147"
-
-    # restrict your ingress to only necessary IPs and ports.
-  }
 
   egress {
     from_port   = 0
