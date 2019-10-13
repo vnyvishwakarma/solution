@@ -22,18 +22,22 @@ terraform apply
 ```
 
 ##### Second step: Create s3 bucket for storage to store develop data, it will ask for s3 bucket region name
-
+```
 cd project_root_dir/infra/s3-bucket-data
 terraform init
 terraform plan
 terraform apply
+```
 
-#### Third step: Create ec2 instance, security group and role to access s3 bucket. It will ask for region name and ssh public key path. You destroy the vm multiple times as well by doing terraform destroy.
+##### Third step: Create ec2 instance, security group and role to access s3 bucket. It will ask for region name and ssh public key path. You destroy the vm multiple times as well by doing terraform destroy.
 
+```
 cd project_root_dir/infra/ec2-instance
 terraform init
 terraform plan
 terraform apply
+
+```
 
 
 
