@@ -13,15 +13,15 @@ The VM and any running services must only be accessible from The Dock IP of 40.3
 
 ### Creating the enviroment is a three step process,after setting up environment variable for terraform. Export AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variable
 
-#### First step: Create tfstat aws s3 bucket (depend on region s3 bucket will be create)
-
+##### First step: Create tfstat aws s3 bucket (depend on region s3 bucket will be create)
+```
 cd project_root_dir/infra/s3-bucket-tfstat
 terraform init
 terraform plan
 terraform apply
+```
 
-
-#### Second step: Create s3 bucket for storage to store develop data, it will ask for s3 bucket region name
+##### Second step: Create s3 bucket for storage to store develop data, it will ask for s3 bucket region name
 
 cd project_root_dir/infra/s3-bucket-data
 terraform init
