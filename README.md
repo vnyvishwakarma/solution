@@ -8,3 +8,39 @@ The VM and any running services must only be accessible from The Dock IP of 40.3
 - External storage (i.e. S3 bucket) must be created and made available : Using role to access s3 bucket from ec2 instance https://github.com/vnyvishwakarma/solution/blob/master/infra/ec2-instance/s3-access-role.tf and finally mapping role to ec2-istance using https://github.com/vnyvishwakarma/solution/blob/master/infra/ec2-instance/aws-instance-profile.tf;
 - The external storage must remain after the VM has been deleted and be available once again when a replacement VM is created .: seprate script to create s3 bucket https://github.com/vnyvishwakarma/solution/tree/master/infra/s3-bucket-data;
 - The VM and any running services must only be accessible from The Dock IP of 40.30.20.10 : security group https://github.com/vnyvishwakarma/solution/blob/master/infra/ec2-instance/security_group.tf ;
+
+
+.
+├── infra
+│   ├── ec2-instance
+│   │   ├── aws-instance-profile.tf
+│   │   ├── aws_eip.tf
+│   │   ├── backend.tf
+│   │   ├── datasource.tf
+│   │   ├── install_docker.sh
+│   │   ├── key_pair.tf
+│   │   ├── main.tf
+│   │   ├── provider.tf
+│   │   ├── s3-access-role.tf
+│   │   ├── security_group.tf
+│   │   └── variables.tf
+│   ├── s3-bucket-data
+│   │   ├── backend.tf
+│   │   ├── main.tf
+│   │   ├── provider.tf
+│   │   └── variable.tf
+│   └── s3-bucket-tfstat
+│       ├── main.tf
+│       ├── provider.tf
+│       └── variable.tf
+└── modules
+    ├── ec2-instance
+    │   ├── main.tf
+    │   ├── output.tf
+    │   └── variable.tf
+    ├── s3-bucket
+    │   ├── main.tf
+    │   └── variable.tf
+    └── vpc
+
+
