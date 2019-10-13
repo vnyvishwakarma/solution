@@ -9,7 +9,7 @@ The VM and any running services must only be accessible from The Dock IP of 40.3
 - The external storage must remain after the VM has been deleted and be available once again when a replacement VM is created .: seprate script to create s3 bucket https://github.com/vnyvishwakarma/solution/tree/master/infra/s3-bucket-data;
 - The VM and any running services must only be accessible from The Dock IP of 40.30.20.10 : security group https://github.com/vnyvishwakarma/solution/blob/master/infra/ec2-instance/security_group.tf ;
 
-
+bash ```
 .
 ├── infra
 │   ├── ec2-instance
@@ -42,5 +42,6 @@ The VM and any running services must only be accessible from The Dock IP of 40.3
     │   ├── main.tf
     │   └── variable.tf
     └── vpc
+    ```
 
 
